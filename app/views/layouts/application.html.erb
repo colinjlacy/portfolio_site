@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PortfolioSite</title>
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+<header class="navbar">
+  <div class="container">
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	  </button>
+	  <span class="navbar-brand"><a href="/">Colin J Lacy</a><small> | Guy with a Keyboard</small></span>
+	</div>
+	<div id="navbar" class="collapse navbar-collapse">
+	  <ul class="nav navbar-nav navbar-right">
+		<li><a href="/">Portfolio</a></li>
+		<li><a href="/about/">About</a></li>
+		<li><a href="/contact/">Contact</a></li>
+	  </ul>
+	</div><!--/.nav-collapse -->
+  </div>
+</header>
 
 <%= yield %>
 
+<footer class="container">
+  <div class="row">
+	<div class="col-sm-12 text-center">
+	  <hr/>
+	  <a href="https://github.com/colinjlacy"><%= image_tag "gh.png", width: "64" %></a>
+	</div>
+  </div>
+</footer>
+
+<!--SCRIPTS!!!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
 </body>
+
 </html>

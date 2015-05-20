@@ -10,6 +10,129 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require_tree ../../../vendor/assets/stylesheets/.
  *= require_self
  */
+
+/************
+GLOBAL STYLES
+************/
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+header {
+    background-color: aquamarine;
+    background-image: none;
+}
+header a {
+    /*color: white;*/
+}
+header small {
+    color: #333;
+}
+header button.navbar-toggle {
+    border-color: white;
+}
+header button.navbar-toggle span {
+    border-color: white;
+    background-color: #ffffff;
+}
+nav {
+    background-color: #eee;
+    padding: 2px 0;
+    margin-bottom: 20px;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+    background: none;
+    text-decoration: underline;
+}
+footer {
+    margin-bottom: 30px;
+}
+/* images */
+img {
+    max-width: 100%;
+}
+/* links */
+a {
+    color: #366c56;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    color: #295341;
+    text-decoration: underline;
+}
+/* text */
+h1 {
+    color: #666;
+    margin-top: 0;
+    font-weight: 100;
+    font-size: 6rem;
+    letter-spacing: 1px;
+}
+h2, h3 {
+    color: #777;
+}
+/***********
+CONTACT FORM
+***********/
+label,
+input,
+textarea {
+    display: block;
+}
+input,
+textarea {
+    margin-bottom: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 100%;
+}
+/* Here I'll define some styles that give the contact page a fixed width at certain screen sizes */
+@media (min-width: 520px) {
+    .body-content {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (min-width: 768px) {
+    .body-content {
+        max-width: 700px;
+    }
+}
+@media (min-width: 1200px) {
+    .body-content {
+        max-width: 1170px;
+    }
+}
+/* These styles create the responsive layout for the First Name and Last Name inputs */
+.split {
+    width: 100%;
+    box-sizing: border-box;
+}
+@media (min-width: 520px) {
+    .split {
+        width: 50%;
+        float: left;
+    }
+    .split-left {
+        padding-right: 10px;
+    }
+    .split-right {
+        padding-left: 10px;
+    }
+}
+
+/*********
+HOME PAGE
+*********/
+
+.portfolio-item {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: #e2dfda;
+}
